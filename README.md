@@ -12,3 +12,7 @@ Only once AFTER THE FIRST PUSH (because first push creates the required branches
 - in a dropdown under 'Branch' (default is NONE) choose 'gh-pages' 
 - in the dropdown next to it (default is '/root') choose '/docs'
 - click SAVE
+
+## How deployment works?
+
+Deployment will be triggered every time you push to main. To see if your most recent deployment worked in github repo go to  > actions section
