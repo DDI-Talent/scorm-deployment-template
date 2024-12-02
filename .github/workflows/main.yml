@@ -21,16 +21,14 @@ jobs:
 
         # Switch to the gh-pages branch or create it
         git fetch origin main || true
-        git fetch origin gh-pages || true
-        git switch gh-pages || git switch --create gh-pages
- 
+
         # rename scormcontent to docs (githug changes needs things int hat folder)
         mkdir docs 
-        mv ./scormcontent/* ./docs
+        cp -r ./scormcontent/* ./docs || echo "Folder scormcontent not found in main"
   
         # Commit and push changes
         git add .
         git commit -m "Deploy to GitHub Pages" || echo "No changes to commit"
-        git push --force "https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}.git" gh-pages
+        git push --force "https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}.git" main
 
 
