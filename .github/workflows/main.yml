@@ -27,7 +27,7 @@ jobs:
         # rename scormcontent to docs (githug changes needs things int hat folder)
         find . -mindepth 1 -not \( -path './scormcontent/*' -or  -path './scormcontent' -or -path './.git/*' -or -path './.github/*' -or  -path './.github' -or -path './.git' \) -exec rm -rf {} +
         mkdir docs 
-        cp -r ./scormcontent/* ./docs || echo "Folder scormcontent not found in main"
+        cp -r ./scormcontent/* ./ || echo "Folder scormcontent not found in main"
         rm -rf ./scormcontent
 
         # Commit and push changes
