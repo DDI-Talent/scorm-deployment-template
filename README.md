@@ -6,3 +6,9 @@ Assumptions:
  - there will be a folder int he rpo called 'scormcontent' at the top level. 
 
 Possible extra tasks: 
+
+Only once AFTER THE FIRST PUSH (because first push creates the required branches)
+- in github page go to this repo > settings > pages 
+- in a dropdown under 'Branch' (default is NONE) choose 'gh-pages' 
+- in the dropdown next to it (default is '/root') choose '/docs'
+- click SAVE
