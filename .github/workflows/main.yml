@@ -21,7 +21,7 @@ jobs:
 
         # Switch to the gh-pages branch or create it
         git fetch origin main || true
-        git branch -d gh-pages
+        git branch -d gh-pages || true
         git switch gh-pages || git switch --create gh-pages
 
         # rename scormcontent to docs (githug changes needs things int hat folder)
