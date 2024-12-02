@@ -28,7 +28,8 @@ jobs:
         find . -mindepth 1 -not \( -path './scormcontent/*' -or  -path './scormcontent' -or -path './.git/*' -or -path './.github/*' -or  -path './.github' -or -path './.git' \) -exec rm -rf {} +
         mkdir docs 
         cp -r ./scormcontent/* ./docs || echo "Folder scormcontent not found in main"
-  
+        rm -rf ./scormcontent
+
         # Commit and push changes
         git add .
         git commit -m "Deploy to GitHub Pages" || echo "No changes to commit"
